@@ -2,7 +2,7 @@
 
 APT=/usr/bin/apt
 DNF=/usr/bin/dnf
-
+# These are functions for debian operating system
 debpkgs()
 {
     apt install kate kwrite \
@@ -26,4 +26,20 @@ debupdatelst()
 debupgradelist()
 {
     
+}
+
+# This are functions for fedora operating system
+fedpkgs()
+{
+
+}
+
+auto_fedupdate()
+{
+    dnf update -yy
+}
+
+auto_fedupgrade()
+{
+    dnf upgrade -yy
 }
