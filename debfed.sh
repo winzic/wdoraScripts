@@ -1,4 +1,4 @@
-!/usr/bin/bash
+#!/usr/bin/bash
 
 APT=/usr/bin/apt
 DNF=/usr/bin/dnf
@@ -13,9 +13,9 @@ debpkgs()
                 geany gcc-9-i686-linux-gnu
 }
 # It is a Debian Update function
-debupdate()
+auto_debupdate()
 {
-    apt update 
+    apt update -yy
 }
 
 debupdatelst()
