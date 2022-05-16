@@ -63,3 +63,21 @@ misc_packages()
 {
         dnf install hevea.x86_64 ipython gnuscreen
 }
+
+# Desktop Environments
+xfce_environment()
+{
+    dnf install @xfce-desktop-environment
+}
+
+mate_Environment()
+{
+     dnf install @mate-desktop
+}
+
+openbox_DE()
+{
+    dnf install openbox xbacklight feh conky xorg-x11-drv-libinput \
+                tint2 volumeicon xinput network-manager-applet openbox-libs.x86_64 \
+                
+}
