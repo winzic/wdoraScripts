@@ -52,13 +52,14 @@ epdv_packages()
 # Version Control/Backup tools and Document Managers
 vcbtdm_packages()
 {
-        dnf install git svn Mercurial \
-                    backintime pdfshuffler \
-                    BibTool
+        dnf install git.x86_64 git-svn.noarch mercurial.x86_64 \
+                    backintime-common.noarch backintime-plugins.noarch \
+                    backintime-qt.noarch okular.x86_64 \
+                    BibTool.x86_64
 }
 
 # Miscellaneous Packages
 misc_packages()
 {
-        dnf install hevea ipython gnuscreen
+        dnf install hevea.x86_64 ipython gnuscreen
 }
