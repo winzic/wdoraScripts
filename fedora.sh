@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "This is an install package installation menu"
+
+echo ""
+
+
+
 
 # This are functions for fedora operating system
 fedpkgs()
@@ -80,4 +86,40 @@ openbox_DE()
     dnf install openbox xbacklight feh conky xorg-x11-drv-libinput \
                 tint2 volumeicon xinput network-manager-applet openbox-libs.x86_64 \
                 
+}
+# Bootloader tools for configurations
+bootloader_tools()
+{
+        dnf install grub-customizer.x86_64 -yy
+        dnf install grub* -yy
+}
+
+# Graphical programming tools
+gui_tools()
+{
+    dnf install gnome-builder.x86_64 flatpak-builder.x86_64
+        
+        
+}
+
+development()
+{
+    dnf install gnome-boxes.x86_64 cmake* -yy
+    dnf install coq* -yy 
+    dnf install ddd -yy
+    dnf install fltk* -yy 
+    dnf install frama-c* -yy
+    dnf install ghex* -yy
+    dnf install git* -yy
+    dnf install glade* -yy
+    dnf install godot* -yy
+    dnf install julia* -yy
+    dnf install python3* -yy
+    dnf install python-jupyter* -yy
+    dnf install kdiff3 -yy
+    dnf install java* -yy
+    dnf install qt-creator -yy
+    python3-spyder* -yy
+    
+    
 }
