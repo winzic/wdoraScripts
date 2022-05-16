@@ -118,8 +118,52 @@ development()
     dnf install python-jupyter* -yy
     dnf install kdiff3 -yy
     dnf install java* -yy
-    dnf install qt-creator -yy
-    python3-spyder* -yy
+    dnf install qt-creator* -yy
+    dnf install python3-spyder* -yy
+ }
+ 
+ # Education Tools
+education()
+{
+    dnf install cantor* -yy
+    dnf install chemtool -yy
+    dnf install freecad* -yy 
+    dnf install gchem* -yy
+    dnf install geomview -yy
+    dnf install octave* -yy
+    dnf install armadillo* -yy
+    dnf install TeXmacs* -yy
+    dnf install gpredict* -yy
+    dnf install python3-ipython+notebook python3-notebook.noarch -yy
+    dnf install libreoffice* -yy
+    dnf install scidavis python3-scidavis -yy 
+    dnf install wxMaxima maxima* -yy
+    dnf install xdrawchem -yy 
+}
+
+games()
+{
+    dnf install desmume* -yy
+    dnf install dosbox-staging -yy
+    
+}
+
+graphics()
+{
+    dnf install blender* -yy
+    dnf install dia* -yy
+    dnf install gv -yy
+    dnf install grace* -yy
+    dnf install gwenview* -yy
+    dnf install inkscape* -yy
+    dnf install kolourpaint* -yy
+    dnf install kcolorchooser -yy
+    dnf install kruler -yy
+    dnf install okular -yy
+    dnf install dx* -yy
+    dnf install openscad* -yy
+    dnf install scribus* -yy
+    
     
     
 }
