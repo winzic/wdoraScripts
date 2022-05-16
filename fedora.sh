@@ -25,55 +25,61 @@ auto_fedupgrade()
 # Scientific and Numerical Computing Tools/Environments
 sncte_packages()
 {
-    dnf install gsl maxima gnuoctave \
-                matplotlib scipy speedycrunch \
-                gnu-units spyder root r
+    dnf install gsl* -yy
+    dnf install python3-matplotlib* -yy 
+    dnf install python3-scipy -yy
+    dnf install units -yy 
+    dnf install root* -yy 
+    dnf install R
 }
 
 # Generic Programming and Development Tools/Libraries
 gpdtl_packages()
 {
-    dnf install gcc flex.x86_64 bison.x86_64 bison-devel.x86_64 \
-                openmpi-devel.x86_64 parallel.noarch torque.x86_64 \
-                openmpi.x86_64 torque-client.x86_64 torque-devel.x86_64 \
-                torque-docs.noarch torque-gui.x86_64 torque-libs.x86_64 \
-                torque-scheduler.x86_64 torque-server.x86_64 colorgcc.noarch \
-                cross-gcc-common.noarch gcc-x86_64-linux-gnu.x86_64 gcc-gfortran.x86_64 \
-                libgomp.x86_64 libquadmath.x86_64 libquadmath-devel.x86_64 gcc.x86_64 \
-                libquadmath-devel.x86_64
+    dnf install gcc flex.x86_64 -yy
+    dnf install bison.x86_64 bison-devel.x86_64 -yy
+    dnf install openmpi-devel.x86_64 parallel.noarch torque.x86_64 -yy
+    dnf install openmpi.x86_64 torque-client.x86_64 torque-devel.x86_64 -yy
+    dnf install torque-docs.noarch torque-gui.x86_64 torque-libs.x86_64 -yy
+    dnf install torque-scheduler.x86_64 torque-server.x86_64 colorgcc.noarch -yy
+    dnf install cross-gcc-common.noarch gcc-x86_64-linux-gnu.x86_64 gcc-gfortran.x86_64 -yy
+    dnf install libgomp.x86_64 libquadmath.x86_64 libquadmath-devel.x86_64 gcc.x86_64 -yy
+    dnf install libquadmath-devel.x86_64 -yy
                 
 }
 
 # Editing, Plotting, Drawing and Visualization
 epdv_packages()
 {
-    dnf install texmaker.x86_64 kile.x86_64 lyx.x86_64 \
-                scribus.x86_64 scribus-generator.noarch inkscape.x86_64 scite \
-                inkscape-docs.x86_64 inkscape-psd.noarch inkscape-view.x86_64 \
-                xfig.x86_64 gnuplot.x86_64 gnuplot-doc.noarch plotutils.x86_64 dia.x86_64 \
-                ggobi g3data gimp \
-                mayavi
+    dnf install texmaker.x86_64 -yy
+    dnf install kile.x86_64 lyx.x86_64 -yy
+    dnf install scribus.x86_64 scribus-generator.noarch -yy
+    dnf install inkscape.x86_64 
+    dnf install gnuplot* -yy 
+    dnf install plotutils* -yy
+    dnf install gimp* -yy
+    dnf install Mayavi* -yy
 }
 
 # Version Control/Backup tools and Document Managers
 vcbtdm_packages()
 {
-        dnf install git.x86_64 git-svn.noarch mercurial.x86_64 \
-                    backintime-common.noarch backintime-plugins.noarch \
-                    backintime-qt.noarch okular.x86_64 \
-                    BibTool.x86_64
+        dnf install git* -yy 
+        dnf install mercurial* -yy 
+        dnf install backintime* -yy 
 }
 
 # Miscellaneous Packages
 misc_packages()
 {
-        dnf install hevea.x86_64 ipython gnuscreen
+        dnf install hevea* -yy
+        dnf install screen* -yy
 }
 
 # Desktop Environments
 xfce_environment()
 {
-    dnf install @xfce-desktop-environment
+    dnf install @xfce-desktop-environment -yy
 }
 
 mate_Environment()
@@ -83,8 +89,8 @@ mate_Environment()
 
 openbox_DE()
 {
-    dnf install openbox xbacklight feh conky xorg-x11-drv-libinput \
-                tint2 volumeicon xinput network-manager-applet openbox-libs.x86_64 \
+    dnf install openbox xbacklight feh conky xinput -yy
+    dnf install tint2 volumeicon xinput network-manager-applet openbox-libs.x86_64 -yy
                 
 }
 # Bootloader tools for configurations
@@ -97,7 +103,8 @@ bootloader_tools()
 # Graphical programming tools
 gui_tools()
 {
-    dnf install gnome-builder.x86_64 flatpak-builder.x86_64
+    dnf install gnome-builder.x86_64 -yy
+    dnf install flatpak-builder.x86_64 -yy
         
         
 }
@@ -187,4 +194,14 @@ kde_packs()
     
 }
 
-
+# VirtualBox And VLC
+vbox_vlc()
+{
+    # VirtualBox 
+    
+    # VLC Media player 
+    dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+    dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+    dnf install vlc
+    dnf install python-vlc
+}
