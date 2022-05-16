@@ -163,7 +163,28 @@ graphics()
     dnf install dx* -yy
     dnf install openscad* -yy
     dnf install scribus* -yy
-    
+    dnf install tgif -yy
+    dnf install wings* -yy
+    dnf install WINGs* -yy
+    dnf install xfig -yy
+    dnf install xlockmore* -yy
+    dnf install xzgv -yy
     
     
 }
+
+# KDE packages
+kde_packs()
+{
+    dnf install kdeconnectd* -yy
+    dnf install kget* -yy
+    dnf install ktorrent* -yy
+    dnf install torbrowser-launcher -yy
+    dnf install telegram-desktop -yy
+    dnf install wireshark* -yy
+    dnf install kmail* -yy
+    dnf install konversation -yy
+    
+}
+
+
