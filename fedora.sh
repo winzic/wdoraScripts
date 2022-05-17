@@ -8,9 +8,11 @@ echo ""
 
 
 # This are functions for fedora operating system
-fedpkgs()
+shells()
 {
-
+    dnf install fish* -yy
+    dnf install tcsh* -yy
+    
 }
 
 auto_fedupdate()
@@ -207,3 +209,28 @@ vbox_vlc()
     dnf install vlc -yy
     dnf install python-vlc -yy
 }
+# Multimedia
+multimedia()
+{
+    dnf install brasero* -yy
+    dnf install elisa -yy
+    dnf install k3b* -yy
+    dnf install kamoso -yy
+    dnf install kdenlive -yy
+    dnf install obs-studio* -yy
+    dnf install shotcut* -yy
+ }
+
+# Office
+office()
+{
+    dnf install pdfarranger -yy
+    
+}
+
+
+
+
+
+
+
