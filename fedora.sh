@@ -191,6 +191,7 @@ kde_packs()
     dnf install wireshark* -yy
     dnf install kmail* -yy
     dnf install konversation -yy
+    dnf install kate* -yy
     
 }
 
@@ -198,10 +199,11 @@ kde_packs()
 vbox_vlc()
 {
     # VirtualBox 
-    
+    wget -q https://www.virtualbox.org/download/oracle_vbox.asc
+    rpm --import oracle_vbox.asc
     # VLC Media player 
-    dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-    dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-    dnf install vlc
-    dnf install python-vlc
+    dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -yy
+    dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -yy
+    dnf install vlc -yy
+    dnf install python-vlc -yy
 }
